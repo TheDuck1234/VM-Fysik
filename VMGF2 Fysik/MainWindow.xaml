@@ -1,0 +1,29 @@
+﻿<Window x:Class="VMGF2_Fysik.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VMGF2_Fysik"
+        mc:Ignorable="d"
+        Title="VM Fysik" Height="553.835" Width="894.886">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="GrayBlueGardientBrush"  
+                            StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#9796A0" Offset="0"/>
+            <GradientStop Color="#CCCCFF" Offset="0.5"/>
+            <GradientStop Color="#9796A0" Offset="1"/>
+
+        </LinearGradientBrush>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{StaticResource GrayBlueGardientBrush}"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Image x:Name="footerlinks_bg_jpg" Source="footerlinks_bg.jpg" Stretch="Fill"/>
+        <Image x:Name="SideBar_SkiveTekniskeSkole_png" Margin="612,10,10,344" Source="SideBar_SkiveTekniskeSkole.png" Stretch="Fill"/>
+        <Button x:Name="btn_Omdrejning"  Content="Omdrejning" HorizontalAlignment="Left" Height="55" Margin="68,68,0,0" VerticalAlignment="Top" Width="172" FontSize="18.667" FontFamily="Impact" FontStyle="Italic" Click="btn_Omdrejning_Click"/>
+
+    </Grid>
+</Window>
