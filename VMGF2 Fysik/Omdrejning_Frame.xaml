@@ -5,12 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VMGF2_Fysik"
         mc:Ignorable="d"
-        Title="Omdrejning" Height="300" Width="300">
+        Title="Omdrejning" Height="334.322" Width="330.508" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Image x:Name="footerlinks_bg_jpg" Source="Image/footerlinks_bg.jpg" Stretch="Fill"/>
-        <TextBox x:Name="tb_Vc" HorizontalAlignment="Left" Height="23" Margin="47,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="88" MaxLength="9"  ToolTip="Vc, Skærehastighed" Background="Gray" BorderBrush="White"/>
-        <Label x:Name="label" Content="Vc =" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Foreground="White" Width="32" Height="23"/>
-        <Label x:Name="label1" Content="D =" HorizontalAlignment="Left" Margin="154,25,0,0" VerticalAlignment="Top" Foreground="#FFFFFCFC"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="185,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="88" Background="Gray" ToolTip="D, Diameter, mm"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="44,104,0,0" TextWrapping="Wrap" Text="?" VerticalAlignment="Top" Width="88" MaxLength="9"  ToolTip="Vc, Skærehastighed" Background="Gray" BorderBrush="White"/>
+        <Label x:Name="label" Content="Vc =" HorizontalAlignment="Left" Margin="7,104,0,0" VerticalAlignment="Top" Foreground="White" Width="32" Height="23"/>
+        <Label x:Name="label1" Content="D =" HorizontalAlignment="Left" Margin="154,104,0,0" VerticalAlignment="Top" Foreground="#FFFFFCFC"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="189,104,0,0" TextWrapping="Wrap" Text="?" VerticalAlignment="Top" Width="88" Background="Gray" ToolTip="D, Diameter, mm"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="44,37,0,0" VerticalAlignment="Top" Width="233" Background="Gray" SelectionChanged="comboBox_SelectionChanged"/>
+        <Label x:Name="label2" Content="Find" HorizontalAlignment="Left" Margin="134,6,0,0" VerticalAlignment="Top" Foreground="White" />
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="22" Margin="44,211,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="233" Background="Gray" IsEnabled="False"/>
+        <Label x:Name="label3" Content="N =" HorizontalAlignment="Left" Margin="34,245,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="button" Content="Solve" HorizontalAlignment="Left" Margin="92,163,0,0" VerticalAlignment="Top" Width="119" Click="button_Click"/>
     </Grid>
 </Window>

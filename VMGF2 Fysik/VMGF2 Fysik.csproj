@@ -103,10 +103,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="footerlinks_bg.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="SideBar_SkiveTekniskeSkole.png" />
+    <Resource Include="Image\footerlinks_bg.jpg" />
+    <Resource Include="Image\SideBar_SkiveTekniskeSkole.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
