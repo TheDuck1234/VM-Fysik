@@ -7,8 +7,10 @@
         mc:Ignorable="d"
         Title="Omdrejning" Height="300" Width="300">
     <Grid>
-        <Image x:Name="footerlinks_bg_jpg" Source="footerlinks_bg.jpg" Stretch="Fill"/>
-        <TextBox x:Name="tb_Vc" HorizontalAlignment="Left" Height="23" Margin="48,79,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="88" MaxLength="9"  ToolTip="Vc, Skærehastighed" Background="Gray" BorderBrush="White"/>
-        <Label x:Name="label" Content="Vc =" HorizontalAlignment="Left" Margin="16,79,0,0" VerticalAlignment="Top" Foreground="White" Width="32" Height="23"/>
+        <Image x:Name="footerlinks_bg_jpg" Source="Image/footerlinks_bg.jpg" Stretch="Fill"/>
+        <TextBox x:Name="tb_Vc" HorizontalAlignment="Left" Height="23" Margin="47,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="88" MaxLength="9"  ToolTip="Vc, Skærehastighed" Background="Gray" BorderBrush="White"/>
+        <Label x:Name="label" Content="Vc =" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Foreground="White" Width="32" Height="23"/>
+        <Label x:Name="label1" Content="D =" HorizontalAlignment="Left" Margin="154,25,0,0" VerticalAlignment="Top" Foreground="#FFFFFCFC"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="185,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="88" Background="Gray" ToolTip="D, Diameter, mm"/>
     </Grid>
 </Window>
