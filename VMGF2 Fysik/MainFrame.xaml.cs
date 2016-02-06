@@ -33,7 +33,7 @@ namespace VMGF2_Fysik
             var list = new List<string>() { "n, Omdrejninger", "D, Diameter", "Vc, Skærehastighed" };
             comboBox.ItemsSource = list;
             comboBox.SelectedIndex = 0;
-            listBox.DataContext = calList;
+            //listBox.DataContext = calList;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
