@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VMGF2_Fysik"
         mc:Ignorable="d"
+        Icon="Image/1454824290_old-openofficeorg-math.ico"
         Title="VM Fysik" Height="411.361" Width="588.1" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Image x:Name="footerlinks_bg_jpg" Source="Image/footerlinks_bg.jpg" Stretch="Fill"/>

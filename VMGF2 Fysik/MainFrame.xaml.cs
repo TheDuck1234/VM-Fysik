@@ -61,7 +61,7 @@ namespace VMGF2_Fysik
                 }
                 catch (Exception)
                 {
-                    Message("Fejl, skal være nummere");
+                    Message("Fejl, skal være nummer i felterne");
                 }
             }
             if (comboBox.SelectedItem.Equals("D, Diameter"))
@@ -84,7 +84,7 @@ namespace VMGF2_Fysik
                 }
                 catch (Exception)
                 {
-                    Message("Fejl, skal være nummere");
+                    Message("Fejl, skal være nummer i felterne");
                 }
 
             }
@@ -106,7 +106,7 @@ namespace VMGF2_Fysik
                 }
                 catch (Exception)
                 {
-                    Message("Fejl, skal være nummere");
+                    Message("Fejl, skal være nummer i felterne");
                 }
 
             }
