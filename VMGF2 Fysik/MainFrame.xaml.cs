@@ -147,5 +147,15 @@ namespace VMGF2_Fysik
                 textBox2.ToolTip = "n, Omdrejninger";
             }
         }
+
+        private void textBox1_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textBox1.Text = "";
+        }
+
+        private void textBox2_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textBox2.Text = "";
+        }
     }
 }
