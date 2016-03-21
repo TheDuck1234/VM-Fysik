@@ -35,7 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>1454824290_old-openofficeorg-math.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -118,9 +119,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\1454824290_old-openofficeorg-math.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="1454824290_old-openofficeorg-math.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\Ret_black.png" />
