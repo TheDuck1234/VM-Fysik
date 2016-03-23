@@ -23,5 +23,15 @@ namespace VMGF2_Fysik
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private string CheckTextBox()
+        {
+            return "s";
+        }
     }
 }

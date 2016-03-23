@@ -11,14 +11,14 @@
         <Image x:Name="footerlinks_bg_jpg" Source="Image/footerlinks_bg.jpg" Stretch="Fill"/>
         <Image x:Name="SideBar_SkiveTekniskeSkole_png"  Source="Image/SideBar_SkiveTekniskeSkole.png" Stretch="Fill" Margin="510,10,27,436"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="82,123,0,0" TextWrapping="Wrap" Text="?" VerticalAlignment="Top" Width="88" MaxLength="9"  ToolTip="Vc, Skærehastighed" Background="White" BorderBrush="White" FontSize="16" GotFocus="textBox1_GotFocus"/>
-        <Label x:Name="label" Content="Vc =" HorizontalAlignment="Left" Margin="33,118,0,0" VerticalAlignment="Top" Foreground="White" Width="44" Height="32" FontSize="16"/>
-        <Label x:Name="label1" Content="D =" HorizontalAlignment="Left" Margin="33,171,0,0" VerticalAlignment="Top" Foreground="#FFFFFCFC" FontSize="16"/>
+        <Label x:Name="label" Content="Vc =" HorizontalAlignment="Left" Margin="33,118,0,0" VerticalAlignment="Top" Foreground="White" Width="44" Height="32" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="label1" Content="D =" HorizontalAlignment="Left" Margin="33,171,0,0" VerticalAlignment="Top" Foreground="#FFFFFCFC" FontSize="16" FontWeight="Bold"/>
         <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="82,175,0,0" TextWrapping="Wrap" Text="?" VerticalAlignment="Top" Width="88" Background="White" ToolTip="D, Diameter, mm" FontSize="16" GotFocus="textBox2_GotFocus"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="44,49,0,0" VerticalAlignment="Top" Width="274" Background="Gray" SelectionChanged="comboBox_SelectionChanged" FontSize="16"/>
-        <Label x:Name="label2" Content="Find:" HorizontalAlignment="Left" Margin="134,6,0,0" VerticalAlignment="Top" Foreground="White" FontSize="21.333" />
-        <TextBox x:Name="textBox3" IsReadOnly="True" HorizontalAlignment="Left" Height="59" Margin="44,355,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="274" BorderBrush="White" FontSize="16"/>
-        <Label x:Name="label3" Content="N =" HorizontalAlignment="Left" Margin="44,440,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
-        <Button x:Name="button" Content="Solve" HorizontalAlignment="Left" Margin="44,285,0,0" VerticalAlignment="Top" Width="274" Click="button_Click" FontSize="16"/>
+        <Label x:Name="label2" Content="Find:" HorizontalAlignment="Left" Margin="134,6,0,0" VerticalAlignment="Top" Foreground="White" FontSize="21.333" FontWeight="Bold" />
+        <TextBox x:Name="textBox3" IsReadOnly="True"  HorizontalAlignment="Left" Height="59" Margin="44,355,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="274" BorderBrush="White" FontSize="16"/>
+        <Label x:Name="label3" Content="N =" HorizontalAlignment="Left" Margin="44,440,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="button" Content="Solve" HorizontalAlignment="Left" Margin="44,285,0,0" VerticalAlignment="Top" Width="274" Click="button_Click" FontSize="16" FontWeight="Bold"/>
         <Label x:Name="label4" Content="v1.04" HorizontalAlignment="Left" Margin="534,476,0,0" VerticalAlignment="Top" Foreground="#FFC0B4B4"/>
         <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="82,225,0,0" VerticalAlignment="Top" Width="88" FontSize="16" Visibility="Hidden" ToolTip="Antal tænder"/>
         <Label x:Name="label5" Content="Z =" HorizontalAlignment="Left" Margin="33,221,0,0" VerticalAlignment="Top" Foreground="#FFFDFDFD" FontSize="16" Visibility="Hidden"/>
