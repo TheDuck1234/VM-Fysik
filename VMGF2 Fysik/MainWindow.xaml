@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VMGF2_Fysik"
         mc:Ignorable="d"
-        Title="VM Fysik" Height="553.835" Width="894.886">
+        Title="VM Fysik" Height="553.835" Width="894.886" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <LinearGradientBrush x:Key="GrayBlueGardientBrush"  
                             StartPoint="0,0" EndPoint="1,1">
@@ -24,6 +24,7 @@
         <Image x:Name="footerlinks_bg_jpg" Source="Image/footerlinks_bg.jpg" Stretch="Fill"/>
         <Image x:Name="SideBar_SkiveTekniskeSkole_png" Margin="612,10,10,344" Source="Image/SideBar_SkiveTekniskeSkole.png" Stretch="Fill"/>
         <Button x:Name="btn_Omdrejning"  Content="Omdrejning" HorizontalAlignment="Left" Height="55" Margin="78,80,0,0" VerticalAlignment="Top" Width="242" FontSize="18.667" FontFamily="Impact" FontStyle="Italic" Click="btn_Omdrejning_Click"/>
+        <Button x:Name="btn_Ret"  Content="Retvinklet Trekant" HorizontalAlignment="Left" Height="55" Margin="78,185,0,0" VerticalAlignment="Top" Width="242" FontSize="18.667" FontFamily="Impact" FontStyle="Italic" Click="btn_Ret_Click"/>
 
     </Grid>
 </Window>

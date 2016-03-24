@@ -30,5 +30,11 @@ namespace VMGF2_Fysik
             var dej= new Omdrejning_Frame();
             dej.Show();
         }
+
+        private void btn_Ret_Click(object sender, RoutedEventArgs e)
+        {
+            var ret = new RetvinkletTrekant();
+            ret.Show();
+        }
     }
 }
