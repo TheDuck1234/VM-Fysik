@@ -27,117 +27,129 @@ namespace VMGF2_Fysik
         private void button_Click(object sender, RoutedEventArgs e)
         {
             ClearColors();
-            var tb = CheckTextBox();
-            if (tb.Count >= 2)
+            try
             {
-                double Radians = 57.29577951308235;
-                if (tb[0].Equals("boxa") && tb[1].Equals("boxb"))
+                var tb = CheckTextBox();
+                if (tb.Count >= 2)
                 {
-                    double a = Convert.ToDouble(boxa.Text);
-                    double b = Convert.ToDouble(boxb.Text);
-                    double c = Math.Sqrt((a*a) + (b*b));
-                    c = Math.Round(c, 3);
-                    double A = Math.Atan(a/b)* Radians;
-                    A= Math.Round(A, 3);
-                    double B = 90 - A;
-                    boxc.Text = ErrorCheck(c);
-                    boxA.Text = ErrorCheck(A);
-                    boxB.Text = ErrorCheck(B);
+                    double Radians = 57.29577951308235;
+                    if (tb[0].Equals("boxa") && tb[1].Equals("boxb"))
+                    {
+                        double a = Convert.ToDouble(boxa.Text);
+                        double b = Convert.ToDouble(boxb.Text);
+                        double c = Math.Sqrt((a * a) + (b * b));
+                        c = Math.Round(c, 3);
+                        double A = Math.Atan(a / b) * Radians;
+                        A = Math.Round(A, 3);
+                        double B = 90 - A;
+                        boxc.Text = ErrorCheck(c);
+                        boxA.Text = ErrorCheck(A);
+                        boxB.Text = ErrorCheck(B);
 
-                    string math = "c = \u221A ("+a+"^2 + "+b+"^2) = "+c+ " \n\n" +
-                                  "A = Tan^-1("+a+" / "+b+") = "+A+ " \n\n" +
-                                  "B = 90 - "+A+" = "+B;
-                    BoxS.Text = math;
-                    boxa.BorderBrush = new SolidColorBrush(Colors.Blue);
-                    boxa.BorderThickness = new Thickness(3);
-                    boxb.BorderBrush = new SolidColorBrush(Colors.Blue);
-                    boxb.BorderThickness = new Thickness(3);
-                }
-                else if (tb[0].Equals("boxa") && tb[1].Equals("boxc"))
-                {
-                    double a = Convert.ToDouble(boxa.Text);
-                    double c = Convert.ToDouble(boxc.Text);
-                    double b = Math.Round(Math.Sqrt((c*c) - (a*a)),3);
-                    double A = Math.Round((Math.Asin(a/c))*Radians, 3);
-                    double B = 90 - A;
-                    boxb.Text = ErrorCheck(b);
-                    boxA.Text = ErrorCheck(A);
-                    boxB.Text = ErrorCheck(B);
-                    string math = "b = \u221A (" + c + "^2 + " + a + "^2) = " + c + " \n\n" +
-                                  "A = Sin^-1(" + a + " / " + c + ") = " + A + " \n\n" +
-                                  "B = 90 - " + A + " = " + B;
-                    BoxS.Text = math;
+                        string math = "c = \u221A (" + a + "^2 + " + b + "^2) = " + c + " \n\n" +
+                                      "A = Tan^-1(" + a + " / " + b + ") = " + A + " \n\n" +
+                                      "B = 90 - " + A + " = " + B;
+                        BoxS.Text = math;
+                        boxa.BorderBrush = new SolidColorBrush(Colors.Blue);
+                        boxa.BorderThickness = new Thickness(3);
+                        boxb.BorderBrush = new SolidColorBrush(Colors.Blue);
+                        boxb.BorderThickness = new Thickness(3);
+                    }
+                    else if (tb[0].Equals("boxa") && tb[1].Equals("boxc"))
+                    {
+                        double a = Convert.ToDouble(boxa.Text);
+                        double c = Convert.ToDouble(boxc.Text);
+                        double b = Math.Round(Math.Sqrt((c * c) - (a * a)), 3);
+                        double A = Math.Round((Math.Asin(a / c)) * Radians, 3);
+                        double B = 90 - A;
+                        boxb.Text = ErrorCheck(b);
+                        boxA.Text = ErrorCheck(A);
+                        boxB.Text = ErrorCheck(B);
+                        string math = "b = \u221A (" + c + "^2 + " + a + "^2) = " + c + " \n\n" +
+                                      "A = Sin^-1(" + a + " / " + c + ") = " + A + " \n\n" +
+                                      "B = 90 - " + A + " = " + B;
+                        BoxS.Text = math;
 
-                    boxa.BorderBrush = new SolidColorBrush(Colors.Blue);
-                    boxa.BorderThickness = new Thickness(3);
-                    boxc.BorderBrush = new SolidColorBrush(Colors.Blue);
-                    boxc.BorderThickness = new Thickness(3);
-                }
-                else if (tb[0].Equals("boxa") && tb[1].Equals("boxA"))
-                {
-                    double a = Convert.ToDouble(boxa.Text);
-                    double A = Convert.ToDouble(boxA.Text);
-                    double c = Math.Round(a/Math.Tan(A/Radians), 3);
-                    double b = Math.Round(a/Math.Sin(A/Radians), 3);
-                    double B = 90 - A;
-                    boxc.Text = ErrorCheck(c);
-                    boxb.Text = ErrorCheck(b);
-                    boxB.Text = ErrorCheck(B);
-                    string math = "c = "+a+" / Tan("+A+") \n\n" +
-                                  "b = "+a+" / Sin("+A+") \n\n" +
-                                  "B = 90 - " + A + " = " + B;
-                    BoxS.Text = math;
+                        boxa.BorderBrush = new SolidColorBrush(Colors.Blue);
+                        boxa.BorderThickness = new Thickness(3);
+                        boxc.BorderBrush = new SolidColorBrush(Colors.Blue);
+                        boxc.BorderThickness = new Thickness(3);
+                    }
+                    else if (tb[0].Equals("boxa") && tb[1].Equals("boxA"))
+                    {
+                        double a = Convert.ToDouble(boxa.Text);
+                        double A = Convert.ToDouble(boxA.Text);
+                        double c = Math.Round(a / Math.Tan(A / Radians), 3);
+                        double b = Math.Round(a / Math.Sin(A / Radians), 3);
+                        double B = 90 - A;
+                        boxc.Text = ErrorCheck(c);
+                        boxb.Text = ErrorCheck(b);
+                        boxB.Text = ErrorCheck(B);
+                        string math = "c = " + a + " / Tan(" + A + ") \n\n" +
+                                      "b = " + a + " / Sin(" + A + ") \n\n" +
+                                      "B = 90 - " + A + " = " + B;
+                        BoxS.Text = math;
 
-                    boxa.BorderBrush = new SolidColorBrush(Colors.Blue);
-                    boxa.BorderThickness = new Thickness(3);
-                    boxA.BorderBrush = new SolidColorBrush(Colors.Blue);
-                    boxA.BorderThickness = new Thickness(3);
-                }
-                else if (tb[0].Equals("boxb") && tb[1].Equals("boxA"))
-                {
-                    double A = Convert.ToDouble(boxA.Text);
-                    double b = Convert.ToDouble(boxb.Text);
-                    double a = Math.Round(b*Math.Tan(A/Radians), 3);
-                    double c = Math.Round(b/Math.Cos(A/Radians), 3);
-                    double B = 90 - A;
-                    boxc.Text = ErrorCheck(c);
-                    boxa.Text = ErrorCheck(a);
-                    boxB.Text = ErrorCheck(B);
+                        boxa.BorderBrush = new SolidColorBrush(Colors.Blue);
+                        boxa.BorderThickness = new Thickness(3);
+                        boxA.BorderBrush = new SolidColorBrush(Colors.Blue);
+                        boxA.BorderThickness = new Thickness(3);
+                    }
+                    else if (tb[0].Equals("boxb") && tb[1].Equals("boxA"))
+                    {
+                        double A = Convert.ToDouble(boxA.Text);
+                        double b = Convert.ToDouble(boxb.Text);
+                        double a = Math.Round(b * Math.Tan(A / Radians), 3);
+                        double c = Math.Round(b / Math.Cos(A / Radians), 3);
+                        double B = 90 - A;
+                        boxc.Text = ErrorCheck(c);
+                        boxa.Text = ErrorCheck(a);
+                        boxB.Text = ErrorCheck(B);
 
-                    boxb.BorderBrush = new SolidColorBrush(Colors.Blue);
-                    boxb.BorderThickness = new Thickness(3);
-                    boxA.BorderBrush = new SolidColorBrush(Colors.Blue);
-                    boxA.BorderThickness = new Thickness(3);
-                }
-                else if (tb[0].Equals("boxc") && tb[1].Equals("boxA"))
-                {
-                    double c = Convert.ToDouble(boxc.Text);
-                    double A = Convert.ToDouble(boxA.Text);
-                    double a = Math.Round(c*Math.Sin(A/Radians), 3);
-                    double b = Math.Round(c * Math.Cos(A / Radians), 3);
-                    double B = 90 - A;
-                    boxa.Text = ErrorCheck(a);
-                    boxb.Text = ErrorCheck(b);
-                    boxB.Text = ErrorCheck(B);
+                        boxb.BorderBrush = new SolidColorBrush(Colors.Blue);
+                        boxb.BorderThickness = new Thickness(3);
+                        boxA.BorderBrush = new SolidColorBrush(Colors.Blue);
+                        boxA.BorderThickness = new Thickness(3);
+                    }
+                    else if (tb[0].Equals("boxc") && tb[1].Equals("boxA"))
+                    {
+                        double c = Convert.ToDouble(boxc.Text);
+                        double A = Convert.ToDouble(boxA.Text);
+                        double a = Math.Round(c * Math.Sin(A / Radians), 3);
+                        double b = Math.Round(c * Math.Cos(A / Radians), 3);
+                        double B = 90 - A;
+                        boxa.Text = ErrorCheck(a);
+                        boxb.Text = ErrorCheck(b);
+                        boxB.Text = ErrorCheck(B);
 
-                    boxc.BorderBrush = new SolidColorBrush(Colors.Blue);
-                    boxc.BorderThickness = new Thickness(3);
-                    boxA.BorderBrush = new SolidColorBrush(Colors.Blue);
-                    boxA.BorderThickness = new Thickness(3);
-                }
-                else if (tb[0].Equals("boxa") && tb[1].Equals("boxB"))
-                {
-                    double a = Convert.ToDouble(boxa.Text);
-                    double B = Convert.ToDouble(boxB.Text);
-                    double b = Math.Round(a*Math.Tan(B/Radians), 3);
-                    double c = Math.Round(a/Math.Cos(B/Radians), 3);
-                    double A = 90 - B;
-                    boxc.Text = ErrorCheck(c);
-                    boxb.Text = ErrorCheck(b);
-                    boxA.Text = ErrorCheck(A);
+                        boxc.BorderBrush = new SolidColorBrush(Colors.Blue);
+                        boxc.BorderThickness = new Thickness(3);
+                        boxA.BorderBrush = new SolidColorBrush(Colors.Blue);
+                        boxA.BorderThickness = new Thickness(3);
+                    }
+                    else if (tb[0].Equals("boxa") && tb[1].Equals("boxB"))
+                    {
+                        double a = Convert.ToDouble(boxa.Text);
+                        double B = Convert.ToDouble(boxB.Text);
+                        double b = Math.Round(a * Math.Tan(B / Radians), 3);
+                        double c = Math.Round(a / Math.Cos(B / Radians), 3);
+                        double A = 90 - B;
+                        boxc.Text = ErrorCheck(c);
+                        boxb.Text = ErrorCheck(b);
+                        boxA.Text = ErrorCheck(A);
+                    }
                 }
             }
+            catch (Exception)
+            {
+                Message("Fejl, skal være nummer i felterne");
+            }
+           
 
+        }
+        private void Message(string message)
+        {
+            MessageBoxResult result = MessageBox.Show(message);
         }
 
         private string ErrorCheck(double tal)
