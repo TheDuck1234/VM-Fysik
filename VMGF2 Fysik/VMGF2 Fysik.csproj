@@ -35,8 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>1454824290_old-openofficeorg-math.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -122,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\Ret_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1454824290_old-openofficeorg-math.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
