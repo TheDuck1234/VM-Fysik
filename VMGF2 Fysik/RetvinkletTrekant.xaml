@@ -5,25 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VMGF2_Fysik"
         mc:Ignorable="d"
-        Title="RetvinkletTrekant" Height="736.4" Width="938.1" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="RetvinkletTrekant" Height="636.4" Width="818.05" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+    <LinearGradientBrush x:Key="GrayBlueGardientBrush"  
+                            StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Color="#9796A0" Offset="0"/>
+        <GradientStop Color="#CCCCFF" Offset="0.5"/>
+        <GradientStop Color="#9796A0" Offset="1"/>
+
+    </LinearGradientBrush>
+    <Style TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource GrayBlueGardientBrush}"/>
+        <Setter Property="Width" Value="80"/>
+        <Setter Property="Margin" Value="10"/>
+    </Style>
+    </Window.Resources>
     <Grid>
         <Image x:Name="footerlinks_bg_jpg" Source="Image/footerlinks_bg.jpg" Stretch="Fill"/>
-        <Image x:Name="Ret_black_png" Margin="495,315,67,35.4" Source="Image/Ret_black.png" Stretch="Fill"/>
-        <TextBox x:Name="boxa"  HorizontalAlignment="Left" Height="35" Margin="86,79,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" FontSize="24" FontWeight="Bold"/>
-        <Label x:Name="label" Content="a =" HorizontalAlignment="Left" Margin="30,72,0,0" VerticalAlignment="Top" FontSize="26.667" Foreground="White" FontWeight="Bold"/>
-        <TextBox x:Name="boxb" HorizontalAlignment="Left" Height="35" Margin="395,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" FontSize="24" FontWeight="Bold"/>
-        <Label x:Name="label1" Content="b =" HorizontalAlignment="Left" Margin="322,72,0,0" VerticalAlignment="Top" Foreground="White" FontSize="26.667" FontWeight="Bold"/>
-        <TextBox x:Name="boxc" HorizontalAlignment="Left" Height="35" Margin="720,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" FontSize="24" FontWeight="Bold"/>
-        <Label x:Name="label2" Content="c =" HorizontalAlignment="Left" Margin="650,72,0,0" VerticalAlignment="Top" FontSize="26.667" Foreground="White" FontWeight="Bold" RenderTransformOrigin="-0.601,0.625"/>
-        <TextBox x:Name="boxA"  HorizontalAlignment="Left" Height="35" Margin="86,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" FontSize="24" FontWeight="Bold"/>
-        <Label x:Name="label3" Content="A =" HorizontalAlignment="Left" Margin="30,180,0,0" VerticalAlignment="Top" FontSize="26.667" Foreground="White" FontWeight="Bold"/>
-        <TextBox x:Name="boxB" HorizontalAlignment="Left" Height="35" Margin="395,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" FontSize="24" FontWeight="Bold"/>
-        <Label x:Name="label5" Content="B =" HorizontalAlignment="Left" Margin="322,180,0,0" VerticalAlignment="Top" Foreground="White" FontSize="26.667" FontWeight="Bold"/>
-        <TextBox x:Name="boxC" HorizontalAlignment="Left" Height="35" Margin="720,183,0,0" TextWrapping="Wrap" Text="90" IsReadOnly="True" VerticalAlignment="Top" Width="185" FontSize="24" FontWeight="Bold"/>
-        <Label x:Name="label6" Content="C =" HorizontalAlignment="Left" Margin="650,180,0,0" VerticalAlignment="Top" FontSize="26.667" Foreground="White" FontWeight="Bold" RenderTransformOrigin="-0.601,0.625"/>
-        <TextBox x:Name="BoxS" IsReadOnly="True" HorizontalAlignment="Left" Height="130" Margin="30,530,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="410" FontSize="18.667" FontWeight="Bold"/>
-        <Button x:Name="button" Content="Solve" HorizontalAlignment="Left" Margin="56,315,0,0" VerticalAlignment="Top" Width="354" Height="50" FontSize="24" FontWeight="Bold" Click="button_Click"/>
-        <Button x:Name="button1" Content="Clear" HorizontalAlignment="Left" Margin="56,420,0,0" VerticalAlignment="Top" Width="354" Height="50" RenderTransformOrigin="0.919,0.323" FontSize="24" FontWeight="Bold" Click="button1_Click"/>
+        <Image x:Name="Ret_black_png" Margin="480,315,42,32.2" Source="Image/Ret_black.png" Stretch="Fill"/>
+        <TextBox x:Name="boxa"  HorizontalAlignment="Left" Height="35" Margin="86,79,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="24" FontWeight="Bold"/>
+        <Label x:Name="label" Content="a =" HorizontalAlignment="Left" Margin="30,72,0,0" VerticalAlignment="Top" FontSize="21.333" Foreground="White" FontWeight="Bold"/>
+        <TextBox x:Name="boxb" HorizontalAlignment="Left" Height="35" Margin="345,79,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="24" FontWeight="Bold"/>
+        <Label x:Name="label1" Content="b =" HorizontalAlignment="Left" Margin="271,72,0,0" VerticalAlignment="Top" Foreground="White" FontSize="21.333" FontWeight="Bold"/>
+        <TextBox x:Name="boxc" HorizontalAlignment="Left" Height="35" Margin="600,79,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="24" FontWeight="Bold"/>
+        <Label x:Name="label2" Content="c =" HorizontalAlignment="Left" Margin="528,72,0,0" VerticalAlignment="Top" FontSize="21.333" Foreground="White" FontWeight="Bold" RenderTransformOrigin="-0.601,0.625"/>
+        <TextBox x:Name="boxA"  HorizontalAlignment="Left" Height="34" Margin="86,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="24" FontWeight="Bold"/>
+        <Label x:Name="label3" Content="A =" HorizontalAlignment="Left" Margin="30,180,0,0" VerticalAlignment="Top" FontSize="21.333" Foreground="White" FontWeight="Bold"/>
+        <TextBox x:Name="boxB" HorizontalAlignment="Left" Height="35" Margin="345,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="24" FontWeight="Bold"/>
+        <Label x:Name="label5" Content="B =" HorizontalAlignment="Left" Margin="270,179,0,0" VerticalAlignment="Top" Foreground="White" FontSize="21.333" FontWeight="Bold"/>
+        <TextBox x:Name="boxC" HorizontalAlignment="Left" Height="35" Margin="600,184,0,0" TextWrapping="Wrap" Text="90" IsReadOnly="True" VerticalAlignment="Top" Width="120" FontSize="21.333" FontWeight="Bold"/>
+        <Label x:Name="label6" Content="C =" HorizontalAlignment="Left" Margin="525,179,0,0" VerticalAlignment="Top" FontSize="21.333" Foreground="White" FontWeight="Bold" RenderTransformOrigin="-0.601,0.625"/>
+        <TextBox x:Name="BoxS" IsReadOnly="True" HorizontalAlignment="Left" Height="165" Margin="30,410,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="410" FontSize="18.667" FontWeight="Bold"/>
+        <Button x:Name="button" Content="Solve" HorizontalAlignment="Left" Margin="52,298,0,0" VerticalAlignment="Top" Width="154" Height="35" FontSize="21.333" FontWeight="Bold" Click="button_Click"/>
+        <Button x:Name="button1" Content="Clear" HorizontalAlignment="Left" Margin="286,298,0,0" VerticalAlignment="Top" Width="154" Height="35" RenderTransformOrigin="0.919,0.323" FontSize="21.333" FontWeight="Bold" Click="button1_Click"/>
 
     </Grid>
 </Window>
