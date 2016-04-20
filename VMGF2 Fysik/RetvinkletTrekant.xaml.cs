@@ -177,6 +177,11 @@ namespace VMGF2_Fysik
                     boxa.Text = ErrorCheck(a);
                     boxA.Text = ErrorCheck(A);
 
+                    string math = "c = " + b+ " / Sin(" + B + ") = " + c + " \n\n" +
+                                 "a = " + b + " * Tan(" + B + ") = " + a + " \n\n" +
+                                 "A = 90 - " + B + " = " + A;
+                    BoxS.Text = math;
+
                     boxb.BorderBrush = new SolidColorBrush(Colors.Blue);
                     boxb.BorderThickness = new Thickness(3);
                     boxB.BorderBrush = new SolidColorBrush(Colors.Blue);
@@ -192,6 +197,11 @@ namespace VMGF2_Fysik
                     boxb.Text = ErrorCheck(b);
                     boxa.Text = ErrorCheck(a);
                     boxA.Text = ErrorCheck(A);
+                    string math ="a = " + c + " * Cos(" + B + ") = " + a + " \n\n" +
+                                 "b = " + c + " * Sin(" + B + ") = " + b + " \n\n" +
+                                 "A = 90 - " + B + " = " + A;
+                    BoxS.Text = math;
+
 
                     boxc.BorderBrush = new SolidColorBrush(Colors.Blue);
                     boxc.BorderThickness = new Thickness(3);
