@@ -7,18 +7,18 @@
         mc:Ignorable="d"
         Title="RetvinkletTrekant" Height="636.4" Width="818.05" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Resources>
-    <LinearGradientBrush x:Key="GrayBlueGardientBrush"  
+        <LinearGradientBrush x:Key="GrayBlueGardientBrush"  
                             StartPoint="0,0" EndPoint="1,1">
-        <GradientStop Color="#9796A0" Offset="0"/>
-        <GradientStop Color="#CCCCFF" Offset="0.5"/>
-        <GradientStop Color="#9796A0" Offset="1"/>
+            <GradientStop Color="#9796A0" Offset="0"/>
+            <GradientStop Color="#CCCCFF" Offset="0.5"/>
+            <GradientStop Color="#9796A0" Offset="1"/>
 
-    </LinearGradientBrush>
-    <Style TargetType="{x:Type Button}">
-        <Setter Property="Background" Value="{StaticResource GrayBlueGardientBrush}"/>
-        <Setter Property="Width" Value="80"/>
-        <Setter Property="Margin" Value="10"/>
-    </Style>
+        </LinearGradientBrush>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{StaticResource GrayBlueGardientBrush}"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
     </Window.Resources>
     <Grid>
         <Image x:Name="footerlinks_bg_jpg" Source="Image/footerlinks_bg.jpg" Stretch="Fill"/>
@@ -36,8 +36,7 @@
         <TextBox x:Name="boxC" HorizontalAlignment="Left" Height="35" Margin="600,184,0,0" TextWrapping="Wrap" Text="90" IsReadOnly="True" VerticalAlignment="Top" Width="120" FontSize="21.333" FontWeight="Bold"/>
         <Label x:Name="label6" Content="C =" HorizontalAlignment="Left" Margin="525,179,0,0" VerticalAlignment="Top" FontSize="21.333" Foreground="White" FontWeight="Bold" RenderTransformOrigin="-0.601,0.625"/>
         <TextBox x:Name="BoxS" IsReadOnly="True" HorizontalAlignment="Left" Height="165" Margin="30,410,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="410" FontSize="18.667" FontWeight="Bold"/>
-        <Button x:Name="button" Content="Solve" HorizontalAlignment="Left" Margin="52,298,0,0" VerticalAlignment="Top" Width="154" Height="35" FontSize="21.333" FontWeight="Bold" Click="button_Click"/>
-        <Button x:Name="button1" Content="Clear" HorizontalAlignment="Left" Margin="286,298,0,0" VerticalAlignment="Top" Width="154" Height="35" RenderTransformOrigin="0.919,0.323" FontSize="21.333" FontWeight="Bold" Click="button1_Click"/>
+        <Button x:Name="button" Content="Solve" HorizontalAlignment="Left" Margin="52,298,0,0" VerticalAlignment="Top" Width="358" Height="47" FontSize="21.333" FontWeight="Bold" Click="button_Click"/>
 
     </Grid>
 </Window>

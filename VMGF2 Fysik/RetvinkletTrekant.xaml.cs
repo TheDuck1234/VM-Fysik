@@ -10,6 +10,7 @@ namespace VMGF2_Fysik
     /// </summary>
     public partial class RetvinkletTrekant
     {
+        private bool start = false;
         public RetvinkletTrekant()
         {
             InitializeComponent();
@@ -18,6 +19,23 @@ namespace VMGF2_Fysik
         private void button_Click(object sender, RoutedEventArgs e)
         {
             ClearColors();
+            Stop(start);
+            if (start)
+            {
+                button.Content = "Solve";
+                ClearColors();
+                Stop(start);
+                boxa.Text = "";
+                boxc.Text = "";
+                boxb.Text = "";
+                boxA.Text = "";
+                boxB.Text = "";
+
+                BoxS.Text = "";
+                start = false;
+                return;
+            }
+            start = true;
             try
             {
                 var tb = CheckTextBox();
@@ -208,6 +226,7 @@ namespace VMGF2_Fysik
                     boxB.BorderBrush = new SolidColorBrush(Colors.Blue);
                     boxB.BorderThickness = new Thickness(3);
                 }
+                button.Content = "Clear";
             }
             catch (Exception)
             {
@@ -215,6 +234,18 @@ namespace VMGF2_Fysik
             }
            
 
+        }
+
+        private void Stop(bool s)
+        {
+            boxa.IsEnabled = s;
+            boxc.IsEnabled = s;
+            boxb.IsEnabled = s;
+
+            boxA.IsEnabled = s;
+            boxB.IsEnabled = s;
+            boxC.IsEnabled = s;
+            
         }
         private void Message(string message)
         {
@@ -276,7 +307,7 @@ namespace VMGF2_Fysik
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             ClearColors();
-
+            Stop(true);
             boxa.Text = "";
             boxc.Text = "";
             boxb.Text = "";
