@@ -19,27 +19,26 @@ namespace VMGF2_Fysik
         private void button_Click(object sender, RoutedEventArgs e)
         {
             ClearColors();
-            Stop(start);
-            if (start)
+            if (!start)
             {
-                button.Content = "Solve";
-                ClearColors();
                 Stop(start);
-                boxa.Text = "";
-                boxc.Text = "";
-                boxb.Text = "";
-                boxA.Text = "";
-                boxB.Text = "";
-
-                BoxS.Text = "";
-                start = false;
-                return;
-            }
-            start = true;
-            try
+             try
             {
                 var tb = CheckTextBox();
-                if (tb.Count < 2) return;
+                if (tb.Count < 2)
+                {
+                        Message("udflyd mindst 2 felter");
+                        ClearColors();
+                        Stop(true);
+                        boxa.Text = "";
+                        boxc.Text = "";
+                        boxb.Text = "";
+                        boxA.Text = "";
+                        boxB.Text = "";
+
+                        BoxS.Text = "";
+                        return;
+                }
                 var radians = 57.29577951308235;
                 if (tb[0].Equals("boxa") && tb[1].Equals("boxb"))
                 {
@@ -62,6 +61,9 @@ namespace VMGF2_Fysik
                     boxa.BorderThickness = new Thickness(3);
                     boxb.BorderBrush = new SolidColorBrush(Colors.Blue);
                     boxb.BorderThickness = new Thickness(3);
+                    BeforeStart();
+                    start = true;
+                    button.Content = "Clear";
                 }
                     
                 else if (tb[0].Equals("boxa") && tb[1].Equals("boxc"))
@@ -83,6 +85,9 @@ namespace VMGF2_Fysik
                     boxa.BorderThickness = new Thickness(3);
                     boxc.BorderBrush = new SolidColorBrush(Colors.Blue);
                     boxc.BorderThickness = new Thickness(3);
+                    BeforeStart();
+                    start = true;
+                    button.Content = "Clear";
                 }
                 else if (tb[0].Equals("boxb") && tb[1].Equals("boxc"))
                 {
@@ -103,6 +108,9 @@ namespace VMGF2_Fysik
                     boxc.BorderThickness = new Thickness(3);
                     boxb.BorderBrush = new SolidColorBrush(Colors.Blue);
                     boxb.BorderThickness = new Thickness(3);
+                    BeforeStart();
+                    start = true;
+                    button.Content = "Clear";
                 }
                 else if (tb[0].Equals("boxa") && tb[1].Equals("boxA"))
                 {
@@ -114,8 +122,8 @@ namespace VMGF2_Fysik
                     boxc.Text = ErrorCheck(c);
                     boxb.Text = ErrorCheck(b);
                     boxB.Text = ErrorCheck(B);
-                    var math = "c = " + a + " / Tan(" + A + ") = "+c+" \n\n" +
-                                  "b = " + a + " / Sin(" + A + ") = "+b+" \n\n" +
+                    var math = "b = " + a + " / Tan(" + A + ") = "+b+" \n\n" +
+                                  "c = " + a + " / Sin(" + A + ") = "+c+" \n\n" +
                                   "B = 90 - " + A + " = " + B;
                     BoxS.Text = math;
 
@@ -123,6 +131,9 @@ namespace VMGF2_Fysik
                     boxa.BorderThickness = new Thickness(3);
                     boxA.BorderBrush = new SolidColorBrush(Colors.Blue);
                     boxA.BorderThickness = new Thickness(3);
+                    BeforeStart();
+                    start = true;
+                    button.Content = "Clear";
                 }
                 else if (tb[0].Equals("boxb") && tb[1].Equals("boxA"))
                 {
@@ -134,8 +145,8 @@ namespace VMGF2_Fysik
                     boxc.Text = ErrorCheck(c);
                     boxa.Text = ErrorCheck(a);
                     boxB.Text = ErrorCheck(B);
-                    var math = "c = " + b + " * Tan(" + A + ") = "+c+" \n\n" +
-                                  "a = " + b + " / Cos(" + A + ") = "+a+" \n\n" +
+                    var math = "a = " + b + " * Tan(" + A + ") = "+a+" \n\n" +
+                                  "c = " + b + " / Cos(" + A + ") = "+c+" \n\n" +
                                   "B = 90 - " + A + " = " + B;
                     BoxS.Text = math;
 
@@ -143,6 +154,9 @@ namespace VMGF2_Fysik
                     boxb.BorderThickness = new Thickness(3);
                     boxA.BorderBrush = new SolidColorBrush(Colors.Blue);
                     boxA.BorderThickness = new Thickness(3);
+                    BeforeStart();
+                    start = true;
+                    button.Content = "Clear";
                 }
                 else if (tb[0].Equals("boxc") && tb[1].Equals("boxA"))
                 {
@@ -163,6 +177,9 @@ namespace VMGF2_Fysik
                     boxc.BorderThickness = new Thickness(3);
                     boxA.BorderBrush = new SolidColorBrush(Colors.Blue);
                     boxA.BorderThickness = new Thickness(3);
+                    BeforeStart();
+                    start = true;
+                    button.Content = "Clear";
                 }
                 else if (tb[0].Equals("boxa") && tb[1].Equals("boxB"))
                 {
@@ -183,6 +200,9 @@ namespace VMGF2_Fysik
                     boxa.BorderThickness = new Thickness(3);
                     boxB.BorderBrush = new SolidColorBrush(Colors.Blue);
                     boxB.BorderThickness = new Thickness(3);
+                    BeforeStart();
+                    start = true;
+                    button.Content = "Clear";
                 }
                 else if (tb[0].Equals("boxb") && tb[1].Equals("boxB"))
                 {
@@ -204,6 +224,9 @@ namespace VMGF2_Fysik
                     boxb.BorderThickness = new Thickness(3);
                     boxB.BorderBrush = new SolidColorBrush(Colors.Blue);
                     boxB.BorderThickness = new Thickness(3);
+                    BeforeStart();
+                    start = true;
+                    button.Content = "Clear";
                 }
                 else if (tb[0].Equals("boxc") && tb[1].Equals("boxB"))
                 {
@@ -215,9 +238,9 @@ namespace VMGF2_Fysik
                     boxb.Text = ErrorCheck(b);
                     boxa.Text = ErrorCheck(a);
                     boxA.Text = ErrorCheck(A);
-                    string math ="a = " + c + " * Cos(" + B + ") = " + a + " \n\n" +
-                                 "b = " + c + " * Sin(" + B + ") = " + b + " \n\n" +
-                                 "A = 90 - " + B + " = " + A;
+                    string math = "a = " + c + " * Cos(" + B + ") = " + a + " \n\n" +
+                                  "b = " + c + " * Sin(" + B + ") = " + b + " \n\n" +
+                                  "A = 90 - " + B + " = " + A;
                     BoxS.Text = math;
 
 
@@ -225,17 +248,76 @@ namespace VMGF2_Fysik
                     boxc.BorderThickness = new Thickness(3);
                     boxB.BorderBrush = new SolidColorBrush(Colors.Blue);
                     boxB.BorderThickness = new Thickness(3);
+                    BeforeStart();
+                    start = true;
+                    button.Content = "Clear";
                 }
-                button.Content = "Clear";
+                else
+                {
+                        ClearColors();
+                        Stop(true);
+                        boxa.Text = "";
+                        boxc.Text = "";
+                        boxb.Text = "";
+                        boxA.Text = "";
+                        boxB.Text = "";
+
+                        BoxS.Text = "";
+                    
+                }
+
+                
             }
             catch (Exception)
             {
                 Message("Fejl, skal være nummer i felterne");
-            }
-           
+                button.Content = "Solve";
+                ClearColors();
+                Stop(true);
+                boxa.Text = "";
+                boxc.Text = "";
+                boxb.Text = "";
+                boxA.Text = "";
+                boxB.Text = "";
 
+                BoxS.Text = "";
+                start = false;
+            }
+          }
+            else
+            {
+                button.Content = "Solve";
+                ClearColors();
+                Stop(start);
+                boxa.Text = "";
+                boxc.Text = "";
+                boxb.Text = "";
+                boxA.Text = "";
+                boxB.Text = "";
+
+                BoxS.Text = "";
+                start = false;
+            }
         }
 
+        private void BeforeStart()
+        {
+            if (start)
+            {
+                button.Content = "Solve";
+                ClearColors();
+                Stop(start);
+                boxa.Text = "";
+                boxc.Text = "";
+                boxb.Text = "";
+                boxA.Text = "";
+                boxB.Text = "";
+
+                BoxS.Text = "";
+                start = false;
+            }
+            
+        }
         private void Stop(bool s)
         {
             boxa.IsEnabled = s;
@@ -245,7 +327,6 @@ namespace VMGF2_Fysik
             boxA.IsEnabled = s;
             boxB.IsEnabled = s;
             boxC.IsEnabled = s;
-            
         }
         private void Message(string message)
         {
