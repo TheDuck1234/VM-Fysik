@@ -1,34 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Text.RegularExpressions;
 
 namespace VMGF2_Fysik
 {
     /// <summary>
-    /// Interaction logic for Omdrejning_Frame.xaml
+    /// Interaction logic for OmdrejningFrame.xaml
     /// </summary>
-    public partial class Omdrejning_Frame : Window
+    public partial class OmdrejningFrame : Window
     {
         private List<string> calList = new List<string>();
 
-        public Omdrejning_Frame()
+        public OmdrejningFrame()
         {
             InitializeComponent();
-            setup();
+            Setup();
         }
 
-        private void setup()
+        private void Setup()
         {
             var list = new List<string>() { "n, Omdrejninger", "D, Diameter", "Vc, Skærehastighed", "Vf, Bordtilspænding", "fz, Tilspænding pr. tand" };
             var zList = new List<string>() {"1","2","3","4","5","6"};
@@ -167,8 +157,9 @@ namespace VMGF2_Fysik
         //}
         private void Message(string message)
         {
-            MessageBoxResult result = MessageBox.Show(message);
+            MessageBox.Show(message);
         }
+
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (comboBox.SelectedItem.Equals("n, Omdrejninger"))
@@ -218,12 +209,12 @@ namespace VMGF2_Fysik
             if (!check)
             {
                 comboBox1.Visibility = Visibility.Hidden;
-                label5.Visibility = Visibility.Hidden;;
+                label5.Visibility = Visibility.Hidden;
             }
-            else if (check)
+            else
             {
                 comboBox1.Visibility = Visibility.Visible;
-                label5.Visibility = Visibility.Visible; ;
+                label5.Visibility = Visibility.Visible;
             }
         }
 

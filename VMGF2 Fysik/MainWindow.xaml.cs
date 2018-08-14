@@ -27,7 +27,7 @@ namespace VMGF2_Fysik
 
         private void btn_Omdrejning_Click(object sender, RoutedEventArgs e)
         {
-            var dej= new Omdrejning_Frame();
+            var dej= new OmdrejningFrame();
             dej.Show();
         }
 
