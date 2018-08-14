@@ -25,6 +25,7 @@
         <Image x:Name="SideBar_SkiveTekniskeSkole_png" Margin="113,10,121.8,321.8" Source="Image/SideBar_SkiveTekniskeSkole.png" Stretch="Fill"/>
         <Button x:Name="btn_Omdrejning"  Content="Omdrejning" HorizontalAlignment="Left" Height="55" Margin="90,220,0,0" VerticalAlignment="Top" Width="242" FontSize="18.667" FontFamily="Impact" FontStyle="Italic" Click="btn_Omdrejning_Click"/>
         <Button x:Name="btn_Ret"  Content="Retvinklet Trekant" HorizontalAlignment="Left" Height="55" Margin="90,325,0,0" VerticalAlignment="Top" Width="242" FontSize="18.667" FontFamily="Impact" FontStyle="Italic" Click="btn_Ret_Click"/>
+        <Label x:Name="label" Foreground="White"  Content="V 1.1" HorizontalAlignment="Left" Margin="10,450,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.132,1.923"/>
 
     </Grid>
 </Window>
