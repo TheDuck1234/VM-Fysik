@@ -116,8 +116,8 @@ namespace VMGF2_Fysik
                 {
                     var a = Convert.ToDouble(boxa.Text);
                     var A = Convert.ToDouble(boxA.Text);
-                    var c = Math.Round(a / Math.Tan(A / radians), 3);
-                    var b = Math.Round(a / Math.Sin(A / radians), 3);
+                    var c = Math.Round(a / Math.Sin(A / radians), 3);
+                    var b = Math.Round(a / Math.Tan(A / radians), 3);
                     var B = 90 - A;
                     boxc.Text = ErrorCheck(c);
                     boxb.Text = ErrorCheck(b);
@@ -168,8 +168,8 @@ namespace VMGF2_Fysik
                     boxa.Text = ErrorCheck(a);
                     boxb.Text = ErrorCheck(b);
                     boxB.Text = ErrorCheck(B);
-                    string math = "b = " + c + " * Sin(" + A + ") = " + b + " \n\n" +
-                                  "a = " + b + " * Cos(" + A + ") = " + a + " \n\n" +
+                    string math = "b = " + c + " * Cos(" + A + ") = " + b + " \n\n" +
+                                  "a = " + b + " * Sin(" + A + ") = " + a + " \n\n" +
                                   "B = 90 - " + A + " = " + B;
                     BoxS.Text = math;
 
@@ -208,8 +208,8 @@ namespace VMGF2_Fysik
                 {
                     var b = Convert.ToDouble(boxb.Text);
                     var B = Convert.ToDouble(boxB.Text);
-                    var c = Math.Round(b/Math.Sin(B/radians), 3);
-                    var a = Math.Round(b/Math.Tan(B/radians), 3);
+                    var c = Math.Round(b / Math.Sin(B/radians), 3);
+                    var a = Math.Round(b / Math.Tan(B/radians), 3);
                     var A = 90 - B;
                     boxc.Text = ErrorCheck(c);
                     boxa.Text = ErrorCheck(a);
